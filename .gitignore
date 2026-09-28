@@ -1,0 +1,50 @@
+# Node modules
+/node_modules
+
+# Compilation output
+/dist
+
+# pnpm deploy output
+/bundle
+
+# Hardhat Build Artifacts
+/artifacts
+
+# Hardhat compilation (v2) support directory
+/cache
+
+# Typechain output
+/types
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Hardhat coverage reports
+/coverage
+
+# Gas snapshot files
+/.gas-snapshot
+
+# Separate compatibility build and local recipient secrets
+/artifacts-paris
+/cache-paris
+/.wallets/
+/reports/.repair.lock
+/reports/.paris-deployment.tmp
+
+# Snapshot cheatcodes output
+/snapshots
+
+# Local credentials, editor/OS files and logs
+.DS_Store
+*.log
+*.pem
+*.key
+/keystore/
+/keystores/
+
+# Archived generated compiler internals; keep the public ABI/bytecode snapshot
+/archive/shanghai/artifacts/build-info/
+/archive/shanghai/artifacts/**/*.d.ts

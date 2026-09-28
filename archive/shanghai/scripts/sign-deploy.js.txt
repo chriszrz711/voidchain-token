@@ -1,0 +1,20 @@
+import "dotenv/config";
+import { ethers } from "ethers";
+import fs from "fs";
+
+const wallet = new ethers.Wallet(process.env.PRIVATE_KEY);
+
+const data = fs.readFileSync("deploy-data.txt", "utf8").trim();
+
+const tx = {
+  type: 0,
+  nonce: 0,
+  gasPrice: 0,
+  gasLimit: 3000000,
+  chainId: 36500,
+  data: data,
+};
+
+const signedTx = await wallet.signTransaction(tx);
+
+console.log(signedTx);

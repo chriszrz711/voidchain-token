@@ -1,0 +1,51 @@
+import "dotenv/config";
+import { ethers } from "ethers";
+import artifact from "../artifacts/contracts/SimpleToken.sol/SimpleToken.json" with { type: "json" };
+
+const RPC_URL = "https://api-backend.voidchain.net/api";
+
+const provider = new ethers.JsonRpcProvider(
+  RPC_URL,
+  {
+    name: "voidchain-testnet",
+    chainId: 36500,
+  },
+  {
+    staticNetwork: true,
+  }
+);
+
+const wallet = new ethers.Wallet(
+  process.env.PRIVATE_KEY,
+  provider
+);
+
+async function main() {
+  console.log("Deploying from:", wallet.address);
+
+  const factory = new ethers.ContractFactory(
+    artifact.abi,
+    artifact.bytecode,
+    wallet
+  );
+
+  console.log("Deploying SimpleToken...");
+
+  const token = await factory.deploy(1_000_000);
+
+  const tx = token.deploymentTransaction();
+
+  console.log("Deployment transaction:", tx.hash);
+
+  await token.waitForDeployment();
+
+  console.log(
+    "SimpleToken address:",
+    await token.getAddress()
+  );
+}
+
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});

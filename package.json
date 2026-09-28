@@ -1,0 +1,27 @@
+{
+  "name": "voidchain-token",
+  "version": "1.0.0",
+  "description": "VoidChain Testnet SCT deployment and transfer verification",
+  "scripts": {
+    "test": "node --test",
+    "verify:deployment": "node scripts/verify-deployment.js",
+    "compile": "hardhat compile",
+    "compile:paris": "hardhat compile",
+    "simulate:paris": "node scripts/repair-deployment.js simulate",
+    "repair:execute": "node scripts/repair-deployment.js execute",
+    "verify:paris": "node scripts/repair-deployment.js verify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^22.20.4",
+    "hardhat": "^3.18.0",
+    "typescript": "~6.0.3"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.4",
+    "ethers": "^6.17.0"
+  }
+}

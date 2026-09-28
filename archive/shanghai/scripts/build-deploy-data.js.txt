@@ -1,0 +1,11 @@
+import { ethers } from "ethers";
+import artifact from "../artifacts/contracts/SimpleToken.sol/SimpleToken.json" with { type: "json" };
+
+const factory = new ethers.ContractFactory(
+  artifact.abi,
+  artifact.bytecode
+);
+
+const deployTx = await factory.getDeployTransaction(1_000_000);
+
+console.log(deployTx.data);

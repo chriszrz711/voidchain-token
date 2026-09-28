@@ -1,0 +1,131 @@
+{
+  "checkedAt": "2026-09-28T05:47:07.569Z",
+  "endpoint": "https://api-backend.voidchain.net",
+  "hash": "0xc625f5ba242db3ac198622a8f671d049e73311c722f355c4b21052eb0b5740b8",
+  "address": "0xf51c0ca6f7e9f687933b2269cbf6ef9b19f753c0",
+  "deployer": "0xAfCe760312063CD81F9721967bF33C048cb23061",
+  "readOnly": true,
+  "checks": {
+    "transaction": {
+      "ok": true,
+      "value": {
+        "root": "d84002a4014d65d0bfcf55136562854c32a33507bf7d39bf7897f4a12925f0df",
+        "status": 2,
+        "transactionHash": "0xc625f5ba242db3ac198622a8f671d049e73311c722f355c4b21052eb0b5740b8",
+        "contractAddress": "0xf51c0ca6f7e9f687933b2269cbf6ef9b19f753c0",
+        "blockHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "blockNumber": 1310952,
+        "transactionIndex": 0,
+        "return_data": "",
+        "from": "0xafce760312063cd81f9721967bf33c048cb23061",
+        "to": "0x0000000000000000000000000000000000000000",
+        "nonce": 0,
+        "txtype": 1,
+        "amount": 0,
+        "timeval": 1790573372730147000,
+        "inputMatchesSignedTransaction": true
+      }
+    },
+    "block": {
+      "ok": true,
+      "value": {
+        "parentHash": "0x92df048f84d6ddd1e5a0bbad06a0c188ed89d0456b5ef34c37730df2993892de",
+        "miner": "0xfd214e684ba13ee01fe9a30369411c3155cd5ddd",
+        "stateRoot": "0x7ae5eff1c2437f2390cffca291ec66d848814294c7c36ca9b3df242d9164d1ea",
+        "transactionsRoot": "0xb17d33a490a6d3108f75bf6011d6734d95037f380fdb1e6018bb76478ac9e831",
+        "receiptsRoot": "0x3619ae865ce663219d54ac8a07c47c1cb434e3682773d5bbf6a71656ec7704bb",
+        "Recno": 1950878,
+        "number": 1310952,
+        "timestamp": 1790573372730147000,
+        "Txns": [
+          "0xc625f5ba242db3ac198622a8f671d049e73311c722f355c4b21052eb0b5740b8",
+          "0xed04558820860a004588a4966e8526000e9499cde698b97737703fa4602026bc"
+        ],
+        "includesDeployment": true
+      }
+    },
+    "contractAccount": {
+      "ok": false,
+      "error": "find rec fail"
+    },
+    "deployerAccount": {
+      "ok": true,
+      "value": {
+        "Nonce": 1,
+        "Addrno": 0,
+        "Balance": 10000000000,
+        "Root": "0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421",
+        "Type": 0,
+        "Owner": "0x0000000000000000000000000000000000000000",
+        "Grant": "0x0000000000000000000000000000000000000000",
+        "GasDate": 21,
+        "GasValue": 187123280,
+        "GasBuyValue": 0,
+        "Content": "init account"
+      }
+    },
+    "receipt": {
+      "ok": false,
+      "error": "the method` eth_getTransactionReceipt does not exist/is not available"
+    },
+    "code": {
+      "ok": false,
+      "error": "the method` eth_getCode does not exist/is not available"
+    },
+    "identityControl": {
+      "ok": true,
+      "value": "12345678"
+    },
+    "eth_call.name": {
+      "ok": false,
+      "error": "Empty return data; token value is unknown, not zero"
+    },
+    "eth_call.symbol": {
+      "ok": false,
+      "error": "Empty return data; token value is unknown, not zero"
+    },
+    "eth_call.decimals": {
+      "ok": false,
+      "error": "Empty return data; token value is unknown, not zero"
+    },
+    "eth_call.totalSupply": {
+      "ok": false,
+      "error": "Empty return data; token value is unknown, not zero"
+    },
+    "eth_call.balanceOf": {
+      "ok": false,
+      "error": "Empty return data; token value is unknown, not zero"
+    },
+    "nativeQuery": {
+      "ok": false,
+      "error": "Session not found!"
+    },
+    "signedDeploymentSimulation": {
+      "ok": false,
+      "error": "invalid opcode: opcode 0x5f not defined"
+    }
+  },
+  "token": {
+    "name": null,
+    "symbol": null,
+    "decimals": null,
+    "totalSupply": null,
+    "balanceOf": null
+  },
+  "chainId": 36500,
+  "localTransaction": {
+    "nonce": 0,
+    "gasLimit": "3000000",
+    "gasPrice": "0",
+    "dataHash": "0xe85618c937d826a905945bc8baa44f65a60cbfbe27303f869396c446deaccf1e",
+    "matchesArtifactAndConstructor": true,
+    "firstPush0Pc": 36
+  },
+  "verdict": "DEPLOYMENT_NOT_USABLE_PUSH0_UNSUPPORTED",
+  "historicalReceiptAvailable": false,
+  "note": "Simulation uses current node state, not a historical receipt. status=2 and a derived contractAddress alone do not prove constructor success.",
+  "transfer": {
+    "performed": false,
+    "reason": "Read-only verifier; no wallet creation, signing, broadcast, or automatic redeployment"
+  }
+}
